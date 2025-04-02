@@ -39,7 +39,7 @@ app.get('/api/health', (req, res) => {
 // Rota que faz a chamada simulada com timeout
 app.get('/api/timeout', async (req, res) => {
     try {
-        const result = await timeoutPromise(3000, externalService());
+        const result = await timeoutPromise(6000, externalService());
         res.send(result);
     } catch (error) {
         res.status(500).send(`Erro: ${error.message}`);
