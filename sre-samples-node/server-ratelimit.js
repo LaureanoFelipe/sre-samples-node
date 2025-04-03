@@ -32,4 +32,11 @@ app.get('/api/ratelimit', async (req, res) => {
 // Iniciando o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
+
+    // Função para simular o erro de Rate Limit
+    (async function () {
+        for (let i = 1; i <= 100; i++) {//Loop para enviar 100 requisições
+            const response = await fetch('http://localhost:8080/api/ratelimit');
+        }
+    })();
 });
