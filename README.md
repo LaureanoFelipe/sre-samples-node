@@ -112,7 +112,7 @@ Ajustar configurações de timeout e corrigir erro de timeout execedido ao invoc
 
 ```
 // INSIRA SUA ANÁLISE OU PARECER ABAIXO
-
+A chamada externalService leva 5 segundos para retornar, enquanto o tempo limite para a Promise é de 3 segundos. Ajustei o tempo na linha 42 para 6 segundos eliminando o erro "Tempo limite excedido".
 
 
 ```
@@ -179,7 +179,7 @@ Alterar limite de requisições permitidas para 100 num intervalo de 1 minuto e 
 
 ```
 // INSIRA SUA ANÁLISE OU PARECER ABAIXO
-
+Na linha 10 aumentei o limite de requisições para 100. E no bloco de linhas 37 a 41, criei uma função para simular o erro de Rate Limit com um loop que envia 100 requisições.
 
 
 ```
@@ -246,7 +246,7 @@ Aumentar quantidade de chamadas simultâneas e avaliar o comportamento.
 
 ```
 // INSIRA SUA ANÁLISE OU PARECER ABAIXO
-
+Na linha 8 aumentei o número máximo de requisições simltâneas para 5. E da linha 34 a 47 criei uma função para simular 6 requisições simultâneas, onde na sexta chamada ele retorna o erro de capacidade excedida do Bulkhead.
 
 
 ```
@@ -327,7 +327,7 @@ Observar comportamento do circuito no console.
 
 ```
 // INSIRA SUA ANÁLISE OU PARECER ABAIXO
-
+Na linha 24 alterei o percentual de 50% para 60% e o circuito não abriu ao monitorar no console.
 
 
 ```

@@ -21,7 +21,7 @@ async function externalService() {
 // Configuração do Circuit Breaker
 const breaker = new CircuitBreaker(externalService, {
     timeout: 3000,  // Tempo limite de 3 segundos para a chamada
-    errorThresholdPercentage: 50,  // Abre o circuito se 50% das requisições falharem
+    errorThresholdPercentage: 60,  // Abre o circuito se 60% das requisições falharem
     resetTimeout: 10000  // Tenta fechar o circuito após 10 segundos
 });
 
